@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Blog Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>MediaVerse Blog</h1>
+    <p>Content-driven blog with audio & video</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Articles</a>
+    <a href="#">Media</a>
+    <a href="#">Contact</a>
+</nav>
+
+<main>
+
+    <!-- Blog Post -->
+    <article class="post">
+        <h2>The Future of AI</h2>
+        <p class="meta">Posted on Feb 2026 • Tech</p>
+        <p>
+            Artificial Intelligence is transforming industries with automation,
+            intelligence, and decision-making systems.
+        </p>
+    </article>
+
+    <!-- Video Streaming -->
+    <section class="media">
+        <h3>📺 Watch Video</h3>
+        <video id="videoPlayer" controls>
+            <source src="sample-video.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+        <div class="controls">
+            <button onclick="playVideo()">Play</button>
+            <button onclick="pauseVideo()">Pause</button>
+        </div>
+    </section>
+
+    <!-- Audio Player -->
+    <section class="media">
+        <h3>🎵 Listen Podcast</h3>
+        <audio id="audioPlayer" controls>
+            <source src="sample-audio.mp3" type="audio/mp3">
+            Your browser does not support audio.
+        </audio>
+        <div class="controls">
+            <button onclick="playAudio()">Play</button>
+            <button onclick="pauseAudio()">Pause</button>
+            <button onclick="muteAudio()">Mute</button>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 MediaVerse Blog | Designed for Enhanced UX</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
