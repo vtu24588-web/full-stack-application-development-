@@ -1,0 +1,100 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Common Styling */
+header, footer {
+    background: #1e293b;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    background: #334155;
+    color: white;
+    padding: 0.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container {
+    min-height: 70vh;
+}
+
+aside {
+    background: #e5e7eb;
+    padding: 1rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+article {
+    background: #f8fafc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+/* =========================
+   GRID-BASED LAYOUT
+========================= */
+.grid-layout .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+}
+
+/* =========================
+   FIXED SIDEBAR LAYOUT
+========================= */
+.sidebar-layout .container {
+    display: flex;
+}
+
+.sidebar-layout aside {
+    width: 250px;
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar-layout main {
+    margin-left: 270px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+    .grid-layout .container,
+    .sidebar-layout .container {
+        display: block;
+    }
+
+    .sidebar-layout aside {
+        position: static;
+        width: 100%;
+    }
+
+    .sidebar-layout main {
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
