@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Filter UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>ShopSmart</h1>
+    <p>Find products your way</p>
+</header>
+
+<div class="layout">
+
+    <!-- Filters -->
+    <aside class="filters">
+        <h2>Filters</h2>
+
+        <!-- Price -->
+        <div class="filter-group">
+            <label>Max Price: ₹<span id="priceValue">5000</span></label>
+            <input type="range" id="priceRange" min="500" max="5000" value="5000">
+        </div>
+
+        <!-- Brand -->
+        <div class="filter-group">
+            <h3>Brand</h3>
+            <label><input type="checkbox" value="Nike"> Nike</label>
+            <label><input type="checkbox" value="Adidas"> Adidas</label>
+            <label><input type="checkbox" value="Puma"> Puma</label>
+        </div>
+
+        <!-- Color -->
+        <div class="filter-group">
+            <h3>Color</h3>
+            <button class="color red" data-color="red"></button>
+            <button class="color blue" data-color="blue"></button>
+            <button class="color black" data-color="black"></button>
+        </div>
+
+        <!-- Rating -->
+        <div class="filter-group">
+            <h3>Rating</h3>
+            <select id="ratingFilter">
+                <option value="0">All</option>
+                <option value="4">4 ★ & above</option>
+                <option value="3">3 ★ & above</option>
+            </select>
+        </div>
+    </aside>
+
+    <!-- Products -->
+    <main class="products" id="productList">
+        <!-- Product Cards -->
+        <div class="product" data-price="4500" data-brand="Nike" data-color="red" data-rating="4">
+            <h4>Nike Running Shoes</h4>
+            <p>₹4500</p>
+            <p>⭐ 4.5</p>
+        </div>
+
+        <div class="product" data-price="3000" data-brand="Adidas" data-color="blue" data-rating="3">
+            <h4>Adidas Sports Shoes</h4>
+            <p>₹3000</p>
+            <p>⭐ 3.8</p>
+        </div>
+
+        <div class="product" data-price="2000" data-brand="Puma" data-color="black" data-rating="4">
+            <h4>Puma Casual Shoes</h4>
+            <p>₹2000</p>
+            <p>⭐ 4.2</p>
+        </div>
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
