@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tantraz Registration</title>
+    <link rel="stylesheet" href="tantraz.css">
+</head>
+<body>
+
+<div class="form-container">
+    <form class="registration-form" aria-labelledby="form-heading">
+
+        <h2 id="form-heading">Tantraz Registration Form</h2>
+
+        <!-- Full Name -->
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text"
+                   id="fullname"
+                   name="fullname"
+                   placeholder="Enter your full name"
+                   required>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="Enter your email"
+                   required>
+        </div>
+
+        <!-- Participation Category -->
+        <div class="form-group">
+            <label for="category">Participation Category</label>
+            <select id="category" name="category" required>
+                <option value="">-- Select Category --</option>
+                <option value="individual">Individual</option>
+                <option value="team">Team</option>
+                <option value="audience">Audience</option>
+            </select>
+        </div>
+
+        <!-- T-Shirt Size -->
+        <div class="form-group">
+            <label>T-Shirt Size</label>
+            <div class="inline-options">
+                <label><input type="radio" name="tshirt" value="S" required> S</label>
+                <label><input type="radio" name="tshirt" value="M"> M</label>
+                <label><input type="radio" name="tshirt" value="L"> L</label>
+                <label><input type="radio" name="tshirt" value="XL"> XL</label>
+            </div>
+        </div>
+
+        <!-- Technical Interests -->
+        <div class="form-group">
+            <label>Technical Interests</label>
+            <div class="inline-options">
+                <label><input type="checkbox" name="interests" value="AI"> AI</label>
+                <label><input type="checkbox" name="interests" value="Web Dev"> Web Dev</label>
+                <label><input type="checkbox" name="interests" value="Cloud"> Cloud Computing</label>
+            </div>
+        </div>
+
+        <!-- Expectations -->
+        <div class="form-group">
+            <label for="expectations">Expectations / Suggestions</label>
+            <textarea id="expectations"
+                      name="expectations"
+                      rows="4"
+                      placeholder="Write your expectations or suggestions..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Register Now</button>
+
+    </form>
+</div>
+
+</body>
+</html>
