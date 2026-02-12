@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receipt Generator</title>
+
+    <!-- Link CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Receipt Generator</h2>
+
+        <!-- Price Input -->
+        <label for="price">Price:</label>
+        <input type="number" id="price" placeholder="Enter price amount">
+
+        <!-- Tip Input -->
+        <label for="tip">Tip:</label>
+        <input type="number" id="tip" placeholder="Enter tip amount">
+
+        <!-- Button -->
+        <button onclick="handleReceipt()">Generate Receipt</button>
+
+        <!-- Output Section -->
+        <pre id="output"></pre>
+    </div>
+
+    <!-- Link JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
