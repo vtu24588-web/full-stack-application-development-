@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Match Score Tracker</title>
+    <link rel="stylesheet" href="score.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cricket Match Score</h2>
+
+        <div class="score-box">
+            <p id="scoreDisplay"></p>
+        </div>
+
+        <div class="buttons">
+            <button onclick="addRuns(1)">+1 Run</button>
+            <button onclick="addRuns(4)">+4 Runs</button>
+            <button onclick="addRuns(6)">+6 Runs</button>
+            <button onclick="addWicket()">Wicket</button>
+            <button onclick="resetMatch()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        const teamName = "Chennai Super Kings";
+        let runs = 0;
+        let wickets = 0;
+        let overs = 0;
+
+        const updateScore = () => {
+            document.getElementById("scoreDisplay").innerText =
+                `${teamName}: ${runs}/${wickets} in ${overs} overs`;
+        };
+
+        const addRuns = (run) => {
+            runs += run;
+            updateScore();
+        };
+
+        const addWicket = () => {
+            if (wickets < 10) {
+                wickets++;
+                updateScore();
+            } else {
+                alert("All Out!");
+            }
+        };
+
+        const resetMatch = () => {
+            runs = 0;
+            wickets = 0;
+            overs = 0;
+            updateScore();
+        };
+
+        updateScore();
+    </script>
+
+</body>
+</html>
